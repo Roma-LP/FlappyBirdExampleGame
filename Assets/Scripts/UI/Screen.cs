@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public abstract class Screen : MonoBehaviour
 {
-    [SerializeField] protected CanvasGroup CanvasGroup;
+    [SerializeField] protected GameObject ScreenObject;
     [SerializeField] protected Button Button;
 
     private void OnEnable()

@@ -6,14 +6,18 @@ public class GameOverScreen : Screen
     public event UnityAction RestartButttonClick;
     public override void Close()
     {
-        CanvasGroup.alpha = 0;
-        Button.interactable = false;
+        ScreenObject.SetActive(false);
+        // CanvasGroup.alpha = 0;
+        //Button.interactable = false;
+        Button.gameObject.SetActive(false);
     }
 
     public override void Open()
     {
-        CanvasGroup.alpha = 1;
-        Button.interactable = true;
+        ScreenObject.SetActive(true);
+        // CanvasGroup.alpha = 1;
+        // Button.interactable = true;
+        Button.gameObject.SetActive(true);
     }
 
     protected override void OnButtonClick()
